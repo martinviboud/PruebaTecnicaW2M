@@ -1,0 +1,14 @@
+.container{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.container > div{
+    margin: 10px;
+    
+}
+

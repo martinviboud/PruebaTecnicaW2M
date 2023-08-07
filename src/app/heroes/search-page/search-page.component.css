@@ -1,0 +1,39 @@
+.titulo{
+    margin-top: 10px;
+    font-size: 30px;
+    padding: 10px;
+    
+}
+.container{
+    padding: 30px;
+}
+.buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-field{
+    width: 100%;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+.listado{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.listado > div {
+    margin: 10px;
+}
+
+@media (max-width: 867px) {
+    .buscador{
+        flex-direction: column;
+    }
+    
+  }

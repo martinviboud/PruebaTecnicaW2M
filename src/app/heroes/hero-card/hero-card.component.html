@@ -1,0 +1,34 @@
+<mat-card class="example-card">
+    <div class="pointer" (click)="navigateToHero()">
+        <mat-card-header >
+          <mat-card-title>{{hero.name}}</mat-card-title>
+        
+            <mat-card-subtitle class="publisher" *ngIf="hero.biography.publisher">{{hero.biography.publisher}}</mat-card-subtitle>
+        
+        </mat-card-header>
+        <img mat-card-image [src]="hero.images.md " [alt]="hero.name">
+        <mat-card-content>
+            <mat-chip-listbox>
+            <mat-chip *ngIf="hero.biography.fullName">
+                {{ hero.biography.fullName}}
+            </mat-chip>
+        </mat-chip-listbox>
+        </mat-card-content>
+    </div>
+        <mat-divider></mat-divider>
+        <mat-card-actions>
+            <button mat-button
+                    mat-raised
+                    color="secondary"
+                    [routerLink]="['/layout/edit', hero.id]">
+                <mat-icon>edit</mat-icon>
+                Editar
+            </button>
+            <button mat-button
+                    color="warn"
+                    (click)="deleteHero()">
+                <mat-icon>delete</mat-icon>
+                Borrar
+            </button>
+        </mat-card-actions>
+</mat-card>
